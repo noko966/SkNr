@@ -1,0 +1,5 @@
+.sport_demo{
+    background-color: var(--bodyBg);
+    color: var(--bodyTxt);
+    min-height: 500px;
+}
