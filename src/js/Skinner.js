@@ -722,22 +722,7 @@ class Skinner {
     }
 
     createControlsWrapper() {
-        const skinnerUITogglerWrapper = document.createElement("div");
-        skinnerUITogglerWrapper.className = "skinner_ui_toggler_wrapper";
-        const skinnerUITogglerLabel = document.createElement("label");
-        skinnerUITogglerLabel.id = "skinner_ui_toggler";
-        const skinnerUITogglerImitator = document.createElement("i");
-        this.skinnerUIToggler = document.createElement("input");
-        this.skinnerUIToggler.type = "checkbox";
-        this.skinnerUIToggler.id = "skinner_ui_toggler";
 
-        skinnerUITogglerWrapper.appendChild(skinnerUITogglerLabel);
-        skinnerUITogglerLabel.appendChild(this.skinnerUIToggler);
-
-        skinnerUITogglerLabel.appendChild(skinnerUITogglerImitator);
-        document.body.appendChild(skinnerUITogglerWrapper);
-
-        this.skinnerUIToggler.addEventListener("change", this.toggleUi);
         this.overlay = document.createElement("div");
         this.overlay.id = "skinner_overlay";
         document.body.appendChild(this.overlay);
