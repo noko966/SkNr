@@ -22,10 +22,6 @@ class Skinner {
             inherits: ['accent']
         },
         {
-            name: 'navbar',
-            inherits: ['dominant', 'body']
-            },
-        {
             name: 'header',
             inherits: ['dominant', 'body'],
             variation: 5
@@ -45,10 +41,6 @@ class Skinner {
         {
             name: 'oddActive',
             inherits: ['accent']
-        },
-        {
-            name: 'showMore',
-            inherits: ['body']
         },
           {
             name: 'tab',

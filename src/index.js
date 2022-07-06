@@ -6,11 +6,13 @@ import Skinner from './js/Skinner'
 import createCss from './js/cssCallback'
 
 document.addEventListener("DOMContentLoaded", function () {
-    var head = document.getElementsByTagName("head")[0];
-    window.style = document.createElement("style");
-    style.id = 'demo_css'
-    style.setAttribute("type", "text/css");
-    head.appendChild(style);
+  var head = document.getElementsByTagName("head")[0];
+  window.style = document.createElement("style");
+  style.id = 'demo_css'
+  style.setAttribute("type", "text/css");
+  head.appendChild(style);
+  const SkinnerInstance = new Skinner(createCss, config)
+  SkinnerInstance.init()
 });
 
 const config = {
@@ -111,5 +113,5 @@ const config = {
 };
 
 
-const SkinnerInstance = new Skinner(createCss, config)
-SkinnerInstance.init()
+
+

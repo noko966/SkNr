@@ -32,7 +32,10 @@ function createCss(c) {
         --dominantTxt: ${c.dominantTxt};
         --dominantTxt2: ${c.dominantTxt2};
         --dominantTxt3: ${c.dominantTxt3};
+        --dominantAccent: ${c.dominantAccent};
+        --dominantAccentTxt: ${c.dominantAccentTxt};
         --dominantTxtInverse: ${c.dominantTxtInverse}; 
+        --dominantBorder: ${c.dominantBorder};
         --dominantRadius: ${c.dominantRadius}px;
     
         --accentBg: ${c.accentBg};
@@ -200,7 +203,6 @@ function createCss(c) {
     }
 
 `;
-
 
     let results = {
         css: css,

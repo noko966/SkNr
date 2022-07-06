@@ -1,5 +1,129 @@
 .sport_demo{
+    --pSm: 4px;
+    --pMd: 8px;
+    --pLg: 12px;
+
+    --ht: 35px;
+
+}
+
+.sport_demo{
     background-color: var(--bodyBg);
     color: var(--bodyTxt);
-    min-height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+
 }
+
+.sport_demo a{
+    color: inherit;
+    text-decoration: none;
+}
+
+.sport_demo_nav{
+    width: 100%;
+    height: var(--ht);
+    display: flex;
+    align-items: center;
+    
+}
+
+.sport_demo_nav a{
+    background: var(--dominantG);
+    color: var(--dominantTxt);
+    padding: 0 var(--pMd);
+    height: var(--ht);
+    display: flex;
+    align-items: center;
+    margin-right: 1px;
+}
+
+.sport_demo_nav a:hover,
+.sport_demo_nav a:active{
+    color: var(--dominantAccent);
+}
+
+.sport_sidebar{
+    width: 260px;
+}
+
+.sidebar_item{
+    height: var(--ht);
+    display: flex;
+    align-items: center;
+    padding: 0 var(--pMd);
+    background: var(--dominantBg);
+    color: var(--dominantTxt);
+    border-bottom: 1px solid var(--dominantBorder);
+}
+
+.sidebar_item:hover{
+    background: var(--dominantBgHover);
+    color: var(--dominantTxt)
+}
+
+.sport_tab_wrapper{
+    display: flex;
+    align-items: center;
+}
+
+.sport_tab{
+    background: var(--tabG);
+    color: var(--tabTxt);
+    appearance: none;
+    width: 50%;
+    border: 0;
+    outline: 0;
+    height: var(--ht);
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.sport_tab:hover,
+.sport_tab.sport_tab-active{
+    background: var(--tabActiveG);
+    color: var(--tabActiveTxt);
+}
+
+.sport_game{
+    display: flex;
+    background: var(--eventBg);
+    color: var(--eventTxt);
+    padding: var(--pSm) var(--pMd);
+    border-bottom: 1px solid var(--eventBorder);
+}
+
+.sport_game_info{
+    margin-right: var(--pMd);
+}
+
+.sport_game_info_row > strong {
+    color: var(--eventAccent);
+    width: 20px;
+    text-align: right;
+    margin-right: var(--pSm);
+}
+
+.sport_odd_wrapper{
+    display: flex;
+    align-items: center;
+}
+
+.sport_odd{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: var(--ht);
+    background: var(--oddG);
+    color: var(--oddTxt);
+    cursor: pointer;
+    margin: 0 1px;
+    border-radius: var(--oddRadius);
+}
+
+.sport_odd:hover{
+    background: var(--oddActiveG);
+    color: var(--oddActiveTxt);
+}
+

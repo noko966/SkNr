@@ -1,4 +1,6 @@
 import cuid from 'cuid'
+import {dataset} from './neuronDataSet'
+import {hexToRGB} from './hexToRGB'
 
 function Neuron(bias) {
     this.id = cuid();
@@ -73,51 +75,10 @@ function Neuron(bias) {
 }
 
 
-function hexToRgb(hex) {
-    var shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
-    hex = hex.replace(shorthandRegex, function (m, r, g, b) {
-        return r + r + g + g + b + b;
-    });
-
-    var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
-    return result ? [
-        parseInt(result[1], 16) / 255,
-        parseInt(result[2], 16) / 255,
-        parseInt(result[3], 16) / 255
-    ] : null;
-}
 
 
-const dataset = [
-    { inputs: hexToRgb('#000000'), outputs: [1] },
-    { inputs: hexToRgb('#696969'), outputs: [1] },
-    { inputs: hexToRgb('#808080'), outputs: [1] },
-    { inputs: hexToRgb('#A9A9A9'), outputs: [0] },
-    { inputs: hexToRgb('#C0C0C0'), outputs: [0] },
-    { inputs: hexToRgb('#D3D3D3'), outputs: [0] },
-    { inputs: hexToRgb('#DCDCDC'), outputs: [0] },
-    { inputs: hexToRgb('#F5F5F5'), outputs: [0] },
-    { inputs: hexToRgb('#FFFFFF'), outputs: [0] },
-    { inputs: hexToRgb('#009900'), outputs: [1] },
-    { inputs: hexToRgb('#f14100'), outputs: [1] },
-    { inputs: hexToRgb('#00FF00'), outputs: [0] },
-    { inputs: hexToRgb('#333333'), outputs: [1] },
-    { inputs: hexToRgb('#2b2b2b'), outputs: [1] },
-    { inputs: hexToRgb('#e6e6e6'), outputs: [0] },
-    { inputs: hexToRgb('#ffffff'), outputs: [0] },
-    { inputs: hexToRgb('#d6d6d6'), outputs: [0] },
-    { inputs: hexToRgb('#d7d7d7'), outputs: [0] },
-    { inputs: hexToRgb('#c3c3c3'), outputs: [0] },
-    { inputs: hexToRgb('#adadad'), outputs: [0] },
-    { inputs: hexToRgb('#c0d8b8'), outputs: [0] },
-    { inputs: hexToRgb('#b8d8c7'), outputs: [0] },
-    { inputs: hexToRgb('#faff85'), outputs: [0] },
-    { inputs: hexToRgb('#f1d169'), outputs: [0] },
-    { inputs: hexToRgb('#85f1ff'), outputs: [0] },
-    { inputs: hexToRgb('#000000'), outputs: [1] },
-    { inputs: hexToRgb('#ffb700'), outputs: [0] },
 
-];
+
 
 const inputs = [new Neuron(), new Neuron(), new Neuron()]; // Input Layer w/ 3 neurons
 const hiddens = [new Neuron(), new Neuron(), new Neuron(), new Neuron(), new Neuron(), new Neuron()]; // Hiddent Layer w/ 6 neurons
@@ -182,7 +143,7 @@ function guessVisibleColor(hex) {
     if (!hex) {
         console.error(`no hex provided`);
     }
-    let temp = activate(hexToRgb(hex));
+    let temp = activate(hexToRGB(hex));
     // console.log(temp);
     return temp > .5 ? "#fff" : "#000"
 }

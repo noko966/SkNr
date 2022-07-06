@@ -125,7 +125,6 @@ body {
     background-color: var(--skinnerBg);
     color: var(--skinnerTxt);
     font-family: 'Roboto', sans-serif;
-    padding-top: 50px !important;
 }
 
 .nik_skinner_mobile_wrapper > iframe {
@@ -971,27 +970,3 @@ how to remove the virtical space around the range input in IE*/
     }
 }
 
-/*picker*/
-.pickr .pcr-button {
-    overflow: auto;
-    height: 32px;
-    width: 32px;
-    /*border-radius: 6px;*/
-}
-.pickr .pcr-button:after {
-    box-shadow: inset -3px 0px 1px 1px rgba(0,0,0,0.3), inset 0px 0px 1px 1px rgba(255,255,255,0.3);
-    border-radius: 50%;
-}
-.pcr-app {
-    background: linear-gradient(180deg, var(--skinnerBg), var(--skinnerBg3));
-    border-radius: 6px;
-    border: 2px solid var(--skinnerTxt3);
-}
-.pcr-app .pcr-interaction .pcr-result {
-    background-color: var(--skinnerBg2);
-    color: var(--skinnerTxt);
-    border-radius: 4px;
-}
-.pcr-app[data-theme=classic] {
-    width: 19.5em;
-}
