@@ -22,10 +22,14 @@
 
 .sport_demo_nav{
     width: 100%;
-    height: var(--ht);
+    height: 60px;
     display: flex;
     align-items: center;
-    
+    justify-content: center;
+    background: var(--dominandBg);
+    background: var(--dominantG);
+    color: var(--dominantTxt);
+    margin-bottom: var(--pMd);
 }
 
 .sport_demo_nav a{
@@ -77,16 +81,37 @@
     height: var(--ht);
     text-transform: capitalize;
     cursor: pointer;
+    border-top-left-radius: var(--tabRadius);
+    border-top-right-radius: var(--tabRadius);
+    border-bottom: 1px solid var(--tabBorder);
 }
 
 .sport_tab:hover,
 .sport_tab.sport_tab-active{
     background: var(--tabActiveG);
     color: var(--tabActiveTxt);
+    border-bottom-color: var(--tabActiveAccent);
+}
+
+.sport_game_group > h2{
+    padding: 0 var(--pMd);
+    text-transform: capitalize;
+    font-size: 16px;
+    background: var(--headerG);
+    color: var(--headerTxt);
+    border-top-left-radius: var(--headerRadius);
+    border-top-right-radius: var(--headerRadius);
+    border-bottom: 1px solid var(--headerBorder);;
+    margin: 0;
+    height: var(--ht);
+    display: flex;
+    align-items: center;
+
 }
 
 .sport_game{
     display: flex;
+    align-items: center;
     background: var(--eventBg);
     color: var(--eventTxt);
     padding: var(--pSm) var(--pMd);
@@ -95,6 +120,8 @@
 
 .sport_game_info{
     margin-right: var(--pMd);
+    flex-grow: 1;
+    min-width: 1px;
 }
 
 .sport_game_info_row > strong {
@@ -127,3 +154,34 @@
     color: var(--oddActiveTxt);
 }
 
+.sport_main_wrapper{
+    width: calc(100% - 260px);
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: var(--pMd);
+}
+
+.sport_game_legend{
+    background: var(--subHeaderG);
+    color: var(--subHeaderTxt2);
+    padding: 0 var(--pMd);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.sport_game_legend_name{
+    flex-grow: 1;
+    min-width: 1px;
+}
+
+.sport_game_legend_odd{
+    width: 60px;
+    margin: 0 1px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.sport_game_group{
+
+}
